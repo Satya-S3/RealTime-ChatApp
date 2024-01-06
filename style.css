@@ -1,0 +1,105 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body{
+      background-color: rgb(5, 5, 48);
+      color: white;
+}
+nav{
+      background: linear-gradient(45deg,blue,rgb(255, 0, 255));
+      text-align: center;
+      text-shadow: 4px 4px 5px black;
+      font-size: 30px;
+      margin-bottom: 20px;
+      padding: 10px;
+}
+.container{
+      /* background-color: rgb(25, 23, 23); */
+      height: 75vh;
+      overflow:auto;
+}
+.container .message{
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 12px;
+}
+.container .right{
+      float: right;
+      clear: both;
+      margin: 20px;
+      padding: 15px;
+}
+.container .left{
+      float: left;
+      clear: both;
+      margin: 20px;
+      padding: 15px;
+}
+.container .center{
+      clear: both;
+      margin: auto;
+      text-align: center;
+      background-color: rgb(7, 183, 7);
+      text-shadow: 2px 2px 5px black;
+      font-size: 22px;
+      width: 40%;
+      margin-top: 20px;
+}
+.container .centerLeave{
+      clear: both;
+      margin: auto;
+      text-align: center;
+      background-color: rgb(198, 0, 0);
+      text-shadow: 2px 2px 5px black;
+      font-size: 22px;
+      width: 40%;
+      margin-top: 20px;
+}
+
+.footer{
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-45%);
+}
+.footer form{
+      display: flex;
+      align-items: center;
+}
+.footer textarea{
+      background: #121425;
+      color: white;
+      padding-top: 15px;
+      padding-left: 10px;
+      width: 500px;
+      height: 30px;
+      border-radius: 10px;
+      border: 3px solid white;
+}
+@media screen and (max-width: 660px) {
+      .footer textarea{
+            width: 60vw;
+      }
+      .footer{
+            transform: translate(-40%);
+      }
+}
+.footer button{
+      background-color: transparent;
+      border: none;
+      height: 35px;
+      width: 35px;
+      transform: translate(-70px);
+      cursor: pointer;
+}
+.footer svg{
+      visibility: hidden;
+      transform:translateX(-45px) rotate(40deg);
+}
+.footer textarea:valid ~ svg{
+      visibility: visible ;
+}
+:where(textarea)::-webkit-scrollbar{
+      width: 0px;
+}
